@@ -417,8 +417,9 @@ h1 {
 
 .footer-columns {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr auto;
   gap: 14px;
+  align-items: end;
 }
 
 .footer-block {
@@ -427,9 +428,23 @@ h1 {
   gap: 1px;
 }
 
-.footer-columns .footer-block:last-child {
+.footer-block-featured {
+  font-size: 0.72rem;
+  line-height: 1.18;
+}
+
+.footer-block-featured .footer-title {
+  font-size: 0.76rem;
+  margin-bottom: 3px;
+}
+
+
+.footer-bottom-credit {
+  margin-top: 0;
   justify-self: end;
   text-align: right;
+  font-size: 0.58rem;
+  line-height: 1.08;
 }
 
 .footer-title {
@@ -440,6 +455,11 @@ h1 {
 
 .site-footer p {
   margin: 0;
+}
+
+.footer-name-highlight {
+  color: var(--primary);
+  font-weight: 500;
 }
 
 .site-footer a {
